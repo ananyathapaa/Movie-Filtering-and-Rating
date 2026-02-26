@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Movie Filter</title>
+    3
+    3
+    
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    />
+    <link rel="stylesheet" href="./style.css" />
+  </head>
+  <body>
+    <div class="filter">
+      <button data-filter="all" class="active">All Movies</button>
+      <button data-filter="horror">Horror</button>
+      <button data-filter="comedy">Comedy</button>
+      <button data-filter="documentary">Documentary</button>
+      <button data-filter="sci-fi">Sci-fi</button>
+      <input type="text" placeholder="Search movies..." id="searchQuery" />
+    </div>
+
+    <div class="card-container" id="card-container">
+      <div
+        class="card"
+        data-title="The Autopsy of Jane Doe"
+        data-category="horror"
+      >
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BMjA2MTEzMzkzM15BMl5BanBnXkFtZTgwMjM2MTM5MDI@._V1_FMjpg_UX1000_.jpg"
+        />
+        <div class="card-content">
+          <h2>The Autopsy of Jane Doe</h2>
+          <p>
+            A father-son coroner duo examine a mysterious body and things get
+            creepy.
+          </p>
+          <button class="buy-btn">Rent/Buy</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-title="It follows" data-category="horror">
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BNGZiYWRiYjAtODU0NS00YzAzLTk2MzQtZGVlMzVjM2M3MGQ3XkEyXkFqcGc@._V1_.jpg"
+        />
+        <div class="card-content">
+          <h2>It Follows</h2>
+          <p>
+            A slow, relentless supernatural entity that just… walks toward you.
+          </p>
+          <button class="buy-btn">Rent/Buy</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div
+        class="card"
+        data-title="The social Dilemma"
+        data-category="documentary"
+      >
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSvMZijpWW1K5esRLgyHr2Ktj2HMGg4VGdWVQ&s"
+        />
+        <div class="card-content">
+          <h2>The Social Dilemma</h2>
+          <p>
+            Ex-tech insiders explain how social media platforms manipulate
+            behavior.
+          </p>
+          <button class="buy-btn">Watch Free</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-title="Free solo" data-category="documentary">
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BNWNmMjExZDktY2Q5Ni00MjNiLTgzZTgtNmRiMGYxZTI3MWQxXkEyXkFqcGc@._V1_.jpg"
+        />
+        <div class="card-content">
+          <h2>Free Solo</h2>
+          <p>
+            A climber attempts to scale El Capitan without ropes. Pure anxiety.
+          </p>
+          <button class="buy-btn">Watch Free</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-title="Game night" data-category="comedy">
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BMjI3ODkzNDk5MF5BMl5BanBnXkFtZTgwNTEyNjY2NDM@._V1_.jpg"
+        />
+        <div class="card-content">
+          <h2>Game Night</h2>
+          <p>A harmless couples’ game night spirals into real crime chaos.</p>
+          <button class="buy-btn">Rent/Buy</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-title="The Nice Guys" data-category="comedy">
+        <img
+          src="https://m.media-amazon.com/images/M/MV5BODcyMDA5OGQtNTExYi00OGIwLWIyYWUtNWFlZDg0MTMyYmE2XkEyXkFqcGc@._V1_FMjpg_UX1000_.jpg"
+        />
+        <div class="card-content">
+          <h2>The Nice Guys</h2>
+          <p>
+            Two wildly mismatched private detectives solving a conspiracy in
+            1970s L.A.
+          </p>
+          <button class="buy-btn">Rent/Buy</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-title="Ex Machina" data-category="sci-fi">
+        <img
+          src="https://upload.wikimedia.org/wikipedia/en/b/ba/Ex-machina-uk-poster.jpg"
+        />
+        <div class="card-content">
+          <h2>Ex Machina</h2>
+          <p>A programmer tests a hyper-advanced AI in an isolated house.</p>
+          <button class="buy-btn">Rent/Buy</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+
+      <div class="card" data-title="Arrival" data-category="sci-fi">
+        <img
+          src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRvOcEvXulArvDXn13MUwiVrc7cCrazqW1cTA&s"
+        />
+        <div class="card-content">
+          <h2>Arrival</h2>
+          <p>
+            Linguistics professor tries to communicate with aliens. Emotional
+            and smart.
+          </p>
+          <button class="buy-btn">Watch Free</button>
+          <div class="rating">
+            <div class="stars">
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+              <i class="fa-solid fa-star"></i>
+            </div>
+            <button class="sbmt-btn">Submit</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>
