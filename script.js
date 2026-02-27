@@ -2,6 +2,9 @@
   const filterBtns = document.querySelectorAll("[data-filter]");
   const cards = document.querySelectorAll(".card");
   const search = document.getElementById("searchQuery");
+  const modal = document.getElementById("ratingModal");
+  const modalText = document.getElementById("modalText");
+  const closeModalBtn = document.getElementById("closeModal");
 
   let activeFilter = "all";
   let query = "";
@@ -41,7 +44,7 @@
     let ratingBtn = card.querySelector(".rating");
     let cardContent = card.querySelector(".card-content");
     let starContainer = card.querySelector(".stars");
-
+    let movieTitle = card.dataset.title;
     let rating = 0;
 
     function highlightRating(count) {
@@ -73,10 +76,23 @@
           ratingBtn.remove();
           let msg = document.createElement("div");
           msg.className = "submitted-msg";
-          msg.innerText = "Submitted";
+          msg.innerText = "Submitted ✓";
           cardContent.appendChild(msg);
+          modalText.innerHTML = `You've given <strong>${rating} stars</strong> to <strong>${movieTitle}</strong>.`;
+          modal.classList.add("show");
         }
       });
     }
   });
+
+  closeModalBtn.addEventListener("click", () => {
+    modal.classList.remove("show");
+  });
+
+  modal.addEventListener("click", (e) => {
+    if (e.target === modal) {
+      modal.classList.remove("show");
+    }
+  });
 })();
+
